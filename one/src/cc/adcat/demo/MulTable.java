@@ -1,4 +1,4 @@
-package com.adcat.demo;
+package cc.adcat.demo;
 
 //Multiplication table
 public class MulTable {

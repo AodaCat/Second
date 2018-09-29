@@ -1,4 +1,4 @@
-package com.adcat.demo;
+package cc.adcat.demo;
 
 import java.util.Random;
 
