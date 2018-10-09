@@ -6,11 +6,41 @@ public class Demo {
 
     public static void main(String[] args){
 
-        List<InfiniteRecursion> list = new ArrayList<InfiniteRecursion>();
-        for (int i = 0; i < 10; i++) {
-            list.add(new InfiniteRecursion());
-        }
-        System.out.println(list);
+
+//        ActedAdminStaff aa = new ActedAdminStaff(001, "景甜",5000);
+//        ActedDeveloper ad = new ActedDeveloper(100,"林俊杰", 8000);
+//        ActedTreasurer at = new ActedTreasurer(202, "周杰伦", 10000);
+//        Boss bs = new Boss("马云", 66);
+//
+//        bs.letWord(aa);
+//        bs.letPlay(aa);
+//        bs.letWord(ad);
+//        bs.letPlay(ad);
+//        bs.letWord(at);
+//        bs.letPlay(at);
+
+//        //获取指定字符，在字符串中出现的次数
+//        Scanner input = new Scanner(System.in);
+//        String s = input.next();
+//        char c = input.next().charAt(0);
+//        int num = new StringCharNum().getNum(s, c);
+//        System.out.println(num);
+//        //对字符串中的数据进行排序
+//        String s1 = new StringCharNum().sortString(s);
+//        System.out.println(s1);
+
+//        //随机生成不同的随机数，并存储在指定数组中
+//        int[] arr = new int[20];
+//        RandomNumber.shu(arr, 40);
+//        for (int anArr : arr) {
+//            System.out.print(anArr + " ");
+//        }
+
+//        List<InfiniteRecursion> list = new ArrayList<InfiniteRecursion>();
+//        for (int i = 0; i < 10; i++) {
+//            list.add(new InfiniteRecursion());
+//        }
+//        System.out.println(list);
 
 //        //创建集合对象
 //        ArrayList list = new ArrayList<>();
