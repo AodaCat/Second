@@ -1,11 +1,75 @@
 package cc.adcat.demo;
 
+import java.io.PrintStream;
 import java.util.*;
 
 public class Demo {
 
     public static void main(String[] args){
 
+
+//        //十六进制转储
+//        byte[] a = new byte[]{100,125,3};
+//        if(args.length == 0){
+//            System.out.println(Hex.format(new byte[]{100,125,3}));
+//        }
+
+//        //String.format()方法的使用
+//        try {
+//            throw new DatabaseException(3, 7, "Write failed");
+//        }catch (Exception e){
+//            System.out.println(e);
+//        }
+
+//        //格式化说明符
+//        Receipt receipt = new Receipt();
+//        receipt.printTitle();
+//        receipt.print("iPhone", 1, 6666);
+//        receipt.print("iMac", 2, 8888);
+//        receipt.printTotal();
+
+//        //Formatter类
+//        PrintStream outAlias = System.out;
+//        Turtle tommy = new Turtle("Tommy", new Formatter(System.err));
+//        Turtle terry = new Turtle("Terry", new Formatter(outAlias));
+//        tommy.move(0, 0);
+//        terry.move(4, 8);
+
+//        Pet p1 = new Pet("Tom") {
+//            @Override
+//            public void eat() {
+//                System.out.println("宠物1叫" + getName() + "在吃鱼");
+//            }
+//        };
+//        Pet p2 = new Pet("小黑") {
+//            @Override
+//            public void eat() {
+//                System.out.println("宠物2叫" + getName() + "在啃骨头");
+//            }
+//        };
+//        p1.eat();
+//        p2.eat();
+
+//        join(new IPlayer() {
+//            @Override
+//            public void playBasketball() {
+//                System.out.println("play basketball");
+//            }
+//
+//            @Override
+//            public void playSoccer() {
+//                System.out.println("play soccer");
+//            }
+//
+//            @Override
+//            public void playVolleyball() {
+//                System.out.println("play volleyball");
+//            }
+//        });
+
+//        int i= 0;
+//        i = new Scanner(System.in).nextInt();
+//        int[] ai = new int[i];
 
 //        ActedAdminStaff aa = new ActedAdminStaff(001, "景甜",5000);
 //        ActedDeveloper ad = new ActedDeveloper(100,"林俊杰", 8000);
@@ -113,4 +177,11 @@ public class Demo {
 //        Leaf x = new Leaf();
 //        x.increment().increment().increment().increment().print();
     }
+
+//    public static void join(IPlayer p){
+//        p.playBasketball();
+//        p.playSoccer();
+//        p.playVolleyball();
+//    }
+
 }
