@@ -1,12 +1,112 @@
 package cc.adcat.demo;
 
 import java.io.PrintStream;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Demo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
+
+//        int[] arr = new int[10];
+//        System.out.println(arr[10]);
+
+//        TryCatchDome tcd = new TryCatchDome();
+//        System.out.println("main:" + tcd.tryCatch(0));
+
+//        //Thread线程类
+//        MyThread myThread = new MyThread("新线程1");
+//        myThread.start();
+//        MyThread myThread2 = new MyThread("新线程2");
+//        myThread2.start();
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println("主线程" + i);
+//        }
+
+//        //Runnable接口
+//        Thread myRunnable = new Thread(new MyRunnable());
+//        myRunnable.start();
+//        for (int i = 0; i < 20; i++) {
+//            System.out.println("main" + i);
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+//        //洗牌，发牌
+//        Poker poker = new Poker();
+//        poker.pokerNo();
+//        poker.playPoker();
+
+//        String str = "abafefalfjafafaafaaa";
+//        String[] strs = {"12345","67891","12347809933","98765432102","67891","12347809933"};
+//        char[] characters = {'a', 'b', 'a'};
+//        System.out.println(Arrays.asList(characters));
+//        HashSet linkedList = new HashSet (Arrays.asList(strs));
+//        for (Object s : linkedList) {
+//            System.out.println(s);
+//        }
+
+//        LinkedHashSet<StudentHashSet> hs = new LinkedHashSet<StudentHashSet>();
+//        hs.add(new StudentHashSet("abc",123));
+//        hs.add(new StudentHashSet("def",456));
+//        hs.add(new StudentHashSet("ghi",789));
+//        hs.add(new StudentHashSet("jkl",666));
+//
+//        for (StudentHashSet h : hs) {
+//            System.out.println(h);
+//        }
+
+//        MyGenericClass<String> my = new MyGenericClass<>();
+//        my.setMvp("123");
+//        System.out.println(my.getMvp());
+//        my.print("abc", 123);
+//        my.setMvp(456);
+//        System.out.println(my.getMvp());
+
+//        Collection<String> col = new ArrayList<>();
+//        col.add("abc");
+//        col.add("def");
+//        col.add("g");
+//        col.add("hjk");
+//        System.out.println(col.toString());
+//        for (String aCol : col) {
+//            System.out.println(aCol);
+//        }
+
+//        String str = "2018-04-11";
+//        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        // 将字符串转换成日期对象
+//        Date date = null;
+//        try {
+//            date = sdf.parse(str);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(date);
+
+//        //将字符串从正则表达式匹配的地方切开
+//        String str = "Then, when you have found the shrubbery, you must " +
+//                "cut down the mightiest tree in the forest... " +
+//                "with... a herring!";
+//        Splitting.split(str, " ");
+//        Splitting.split(str, "\\W+");
+//        Splitting.split(str, "n\\W+");
+//        //字符串替换
+//        System.out.println(str.replaceFirst("f\\w+", "located"));
+//        System.out.println(str.replaceAll("f\\w+", "located"));
+//        System.out.println(str.replaceAll("shrubery|tree|herring", "banana"));
+
+//        //在String中检查匹配正则表达式
+//        System.out.println("-1234".matches("-?\\d+"));
+//        System.out.println("5678".matches("-?\\d+"));
+//        System.out.println("+911".matches("-?\\d+"));
+//        System.out.println("+911".matches("([-+])?\\d+"));
 
 //        //十六进制转储
 //        byte[] a = new byte[]{100,125,3};
