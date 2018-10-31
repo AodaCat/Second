@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class StudentHashSet {
     private String name;
-    private int age;
+    public int age;
 
     public StudentHashSet() {
     }

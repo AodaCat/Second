@@ -1,15 +1,159 @@
 package cc.adcat.demo;
 
-import java.io.PrintStream;
+import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Demo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+
+
+//        FileOutputStream fos = new FileOutputStream("text1.txt");
+//        Scanner input = new Scanner(System.in);
+//        while (true){
+//            String str = input.nextLine();
+//            System.out.println("str = " + str);
+//            if (str.equals("886")){
+//                fos.close();
+//                return;
+//            }else {
+//
+//                fos.write(str.getBytes());
+//                fos.write('\r');
+//                fos.write('\n');
+//            }
+//        }
+
+
+//        FileInputStream fis = new FileInputStream("text.txt");
+//        FileOutputStream fos = new FileOutputStream("text1.txt");
+//        int length;
+//        byte[] temp = new byte[1024];
+//        while ((length = fis.read(temp)) != -1){
+//            fos.write(temp,0,length);
+//        }
+//        fos.close();
+//        fis.close();
+
+//        FileOutputStream fos = new FileOutputStream("text1.txt",true);
+//        fos.write(97);
+//        String str = "I love you";
+//        fos.write(str.getBytes());
+//        String str1 = "I love me";
+//        for (int i = 0; i < 5; i++) {
+//            fos.write(("" + '\r' + '\t' + str1).getBytes());
+//        }
+//        fos.close();
+
+
+//        FileInputStream fis = new FileInputStream("text.txt");
+//        FileOutputStream fos = new FileOutputStream("text1.txt");
+//        byte[] temp = new byte[2];
+//        int temp1;
+//        while((temp1 = fis.read(temp)) != -1){
+//            fos.write(temp,0,temp1);
+//        }
+//        fis.close();
+//        fos.close();
+
+//        FileWriter fw = new FileWriter("text.txt");
+//        fw.write("97964486");
+//        fw.close();
+
+//        String s = "abc";
+//        new PrintImpTest().print(new IPrint() {
+//            @Override
+//            public String printBegin() {
+//                return s + "begin";
+//            }
+//
+//            @Override
+//            public String printTask() {
+//                return s + "tasking";
+//            }
+//
+//            @Override
+//            public String printAfter() {
+//                return s + "over";
+//            }
+//        });
+
+
+//        Recursion.printDirFilter(new File("D:/test"));
+
+//        Recursion.printDir(new File("D:/test"), ".txt");
+//        Recursion.printDir(new File("D:/test"));
+//        System.out.println(Recursion.sum(1000));
+
+//        File filer = new File("D://test");
+//        String[] fileList = filer.list();
+//        for (String s : fileList) {
+//            System.out.println(s);
+//        }
+//        File[] files = filer.listFiles();
+//        for (File file : files) {
+//            System.out.println(file);
+//        }
+
+//        String pathname = "D://test";
+//        File dir = new File(pathname);
+//        System.out.println(dir.mkdir());
+//        File file = new File("D:/test/aaa.txt");
+//        System.out.println(file.createNewFile());
+//        System.out.println(file.getPath() + file.length() + file.exists());
+//        File file1 = new File("D://test", "bbb.txt");
+//        System.out.println(file1.createNewFile());
+//        File file2 = new File(dir, "ccc.txt");
+//        System.out.println(file2.createNewFile());
+
+//        StudentHashSet[] sh = {
+//                new StudentHashSet("aaa",20),
+//                new StudentHashSet("bbb",15),
+//                new StudentHashSet("ccc",30),
+//                new StudentHashSet("ddd",25)};
+//        Arrays.sort(sh, Comparator.comparingInt(StudentHashSet::getAge));
+//        for (StudentHashSet s : sh) {
+//            System.out.println(s);
+//        }
+
+//        //Lambda表达式
+//        Runnable task = new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("测试一");
+//            }
+//        };
+//        new Thread(task).start();
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("测试二");
+//            }
+//        }).start();
+
+//        new Thread(()->System.out.println("测试三")).start();
+//        new Thread(()->System.out.println(Thread.currentThread().getName() + "测试四"), "666").start();
+
+//        //生产者与消费者
+//        BaoZi baoZi = new BaoZi("肉包子", 1);
+//        ExecutorService service = Executors.newFixedThreadPool(2);
+//        service.submit(new BaoZiZuo(baoZi));
+//        service.submit(new BaoZiChi(baoZi));
+
+//        //excise9:
+//        Tunnel tunnel = new Tunnel();
+//        for (int i = 0; i < 10; i++) {
+//            new Thread(tunnel, i + "").start();
+//        }
 
 //        int[] arr = new int[10];
 //        System.out.println(arr[10]);
