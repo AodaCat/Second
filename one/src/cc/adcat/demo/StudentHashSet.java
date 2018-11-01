@@ -1,10 +1,12 @@
 package cc.adcat.demo;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class StudentHashSet {
+public class StudentHashSet implements Serializable{
+    private static final long serialVersionUID = -2716695906732659326L;
     private String name;
-    public int age;
+    private int age;
 
     public StudentHashSet() {
     }

@@ -1,6 +1,7 @@
 package cc.adcat.demo;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,9 +13,80 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Demo {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 
+
+//        ArrayList<StudentHashSet> shs = new ArrayList<>();
+//        shs.add(new StudentHashSet("abc", 18));
+//        shs.add(new StudentHashSet("def", 20));
+//        shs.add(new StudentHashSet("ghk", 19));
+//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("text.txt"));
+//        oos.writeObject(shs);
+//        oos.flush();
+//        oos.close();
+//        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("text.txt"));
+//        ArrayList<StudentHashSet> o = (ArrayList<StudentHashSet>) ois.readObject();
+//        ois.close();
+//        System.out.println(o.get(0).toString());
+//        System.out.println(o.get(1).toString());
+//        System.out.println(o.get(2).toString());
+
+//        OutputStreamWriter bw = new OutputStreamWriter(new FileOutputStream("text.txt"),"utf8");
+//        bw.write("滴滴滴hello");
+//        bw.flush();
+//        bw.close();
+
+//        BufferedWriter bw = new BufferedWriter(new FileWriter("text.txt"));
+//        BufferedReader br = new BufferedReader(new FileReader("text.txt"));
+//        Scanner input = new Scanner(System.in);
+//        for (int i = 0; i < 3; i++) {
+//            String str = input.nextLine();
+//            bw.write(str);
+//            bw.newLine();
+//            bw.flush();
+//        }
+//        bw.close();
+//        String str1 = input.nextLine();
+//        for (int i = 0; i < 3; i++) {
+//            if (str1.equals(br.readLine())){
+//                System.out.println(true);
+//                return;
+//            }
+//            if (i == 2){
+//                System.out.println(false);
+//            }
+//        }
+
+
+//        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("text.txt"));
+//        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("text1.txt"));
+//        byte[] temp = new byte[1024];
+//        int length;
+//        while ((length = bis.read(temp)) != -1){
+//            bos.write(temp, 0, length);
+//            bos.flush();
+//        }
+//        bos.close();
+//        bis.close();
+
+//        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("text1.txt"));
+//        bos.write('a');
+//        bos.write("hello world".getBytes());
+//        bos.flush();
+//        bos.close();
+
+//        InputStreamReader isr = new InputStreamReader(new FileInputStream("D:/123.txt"),"gbk");
+//        int temp;
+//        while ((temp = isr.read()) != -1)
+//            System.out.println((char)temp);
+//        isr.close();
+
+
+//        int a = 99;
+//        System.out.println((char)a);
+
+//        NumFrequency.numFre("text.txt", 'a');
 
 //        FileOutputStream fos = new FileOutputStream("text1.txt");
 //        Scanner input = new Scanner(System.in);
