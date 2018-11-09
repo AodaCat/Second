@@ -10,17 +10,71 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Demo {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add("aaa");
+//        list.add("bbb");
+//        list.add("ccc");
+//        list.add("aaaa");
+//        list.add("bbbb");
+//        list.add("cccc");
+//        list.stream().filter(str->str.startsWith("a") && str.length()==4).forEach(System.out::println);
+//        Stream<String> stringStream = list.stream();
+//        System.out.println(Arrays.toString(stringStream.toArray()));
+//        HashSet<String> stringHashSet = new HashSet<>();
+//        stringHashSet.add("aaa");
+//        stringHashSet.add("bbb");
+//        stringHashSet.add("ccc");
+//        stringHashSet.add("aaaa");
+//        stringHashSet.add("bbbb");
+//        stringHashSet.add("cccc");
+//        Stream<String> stringStream1 = stringHashSet.stream();
+//        System.out.println(Arrays.toString(stringStream1.toArray()));
+//        HashMap<Integer, String> hashMap = new HashMap<>();
+//        hashMap.put(1, "aaa");
+//        hashMap.put(2, "bbb");
+//        hashMap.put(3, "ccc");
+//        hashMap.put(4, "aaaa");
+//        hashMap.put(5, "bbbb");
+//        hashMap.put(6, "cccc");
+//        Stream<Integer> integerStream = hashMap.keySet().stream();
+//        integerStream.forEach(num->System.out.println(hashMap.get(num)));
+//        Stream<HashMap.Entry<Integer,String>> entryStream = hashMap.entrySet().stream();
+//        entryStream.forEach(entry->System.out.println(entry.getKey() + entry.getValue()));
+//        Stream<String> stringStream2 = Stream.of("aaa", "bbb", "ccc");
+//        Object[] objects = stringStream2.toArray();
+//        for (Object object : objects) {
+//            System.out.println((String)object);
+//        }
+//        System.out.println(Arrays.toString(objects));
+//        String[] strings = stringStream2.toArray(String[]::new);
+//        System.out.println(Arrays.toString(strings));
+//        List<String> arrayList = stringStream2.collect(Collectors.toList());
+//        System.out.println(arrayList);
 
+
+//        int[] src = new int[]{1,2,3,4,5};
+//        int[] dest = new int[]{6,7,8,9,10};
+//        System.arraycopy( src, 0, dest, 0, 3);
+//        Arrays.toString(src);
+//        Arrays.toString(dest);
+//        Arrays.toString(src);
 
 //        ArrayList<StudentHashSet> shs = new ArrayList<>();
 //        shs.add(new StudentHashSet("abc", 18));
 //        shs.add(new StudentHashSet("def", 20));
 //        shs.add(new StudentHashSet("ghk", 19));
+//
 //        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("text.txt"));
 //        oos.writeObject(shs);
 //        oos.flush();
@@ -492,12 +546,116 @@ public class Demo {
 //        //this关键字的使用
 //        Leaf x = new Leaf();
 //        x.increment().increment().increment().increment().print();
+
+//        showLongTime(()->System.out.println(System.currentTimeMillis()));
+
+//        getProduct(5,6,(a,b)->a*b);
+
+//        decToHex(20,Integer::toHexString);
+
+//        RandomUtil ns = new RandomUtil();
+//        getRandomNumFromOneToNum(10,ns::nextInt);
+//        getRandomNumFromAToB(3,7,ns::nextInt);
+//        getRandomNumFromArray(new int[]{1,2,3,4,5,6},ns::nextInt);
+
+//        System.out.println(Arrays.toString(getObj(() -> new String[5])));
+//        System.out.println(getObj(()->{
+//            HashSet<Integer> hs = new HashSet<>();
+//            Random num = new Random();
+//            for (int i = 0; i < 5; i++) {
+//                hs.add(num.nextInt(20) + 1);
+//            }
+//            return hs;
+//        }));
+//        System.out.println(getObj(()->{
+//            Calendar cale = Calendar.getInstance();
+//            cale.setTime(new Date());
+//            return cale.getTime();
+//        }));
+
+//        doJob("干活",System.out::println);
+//        doJob("还干活",System.out::println,System.out::println);
+//        doJob("总是干活",System.out::println);
+
+//        String string = "Hello World";
+//        method(System.out::println,
+//                str->System.out.println(str.toUpperCase()),
+//                str->System.out.println(str.toLowerCase()),
+//                string);
+//        String[] array = {"迪丽热巴,女", "古力娜扎,女", "马尔扎哈,男"};
+//        method(str->System.out.print(str.split(",")[0] + '\t'),
+//                str->System.out.println(str.split(",")[1]),
+//                array);
+
+//        method(str->str.length()==3, str->str.startsWith("st"), "str");
+
+//        method(Integer::parseInt,"123");
+//        method(str->Integer.parseInt(str) + 1, num->num.toString() + "1", "123", 123);
+
+
     }
 
+
+//    public static void method(Function<String, Integer> function, String str){
+//        System.out.println(function.apply(str));
+//    }
+//    public static void method(Function<String, Integer> function, Function<Integer,String>function1, String str, Integer num){
+//        System.out.println(function.apply(str));
+//        System.out.println(function.andThen(function1).apply(str));
+//        System.out.println(function.compose(function1).apply(num));
+//    }
+
+//    public static void method(Predicate<String> predicate, Predicate<String> predicate1, String str){
+//        System.out.println(predicate.negate().and(predicate1).test(str));
+//    }
+
+//    public static void method(Consumer<String> con, Consumer<String> con1,Consumer<String> con2, String str){
+//        con.andThen(con1.andThen(con2)).accept(str);
+//    }
+//    public static void method(Consumer<String> con, Consumer<String> con1, String[] array){
+//        for (String str : array) {
+//            con.andThen(con1).accept(str);
+//        }
+//    }
+
+//    public static <T> void doJob(T t, Consumer<T> consumer){
+//        consumer.accept(t);
+//    }
+//    public static <T> void doJob(T t, Consumer<T> consumer1, Consumer<T> consumer2){
+//        consumer1.andThen(consumer2).accept(t);
+//    }
+
+//    public static <T>T getObj(Supplier<T> supplier){
+//        return supplier.get();
+//    }
+
+//    public static void getRandomNumFromOneToNum(int num, NumberSupplier ns){
+//        System.out.println(ns.getNum(num));
+//    }
+//    public static void getRandomNumFromAToB(int a ,int b, NumberSupplier ns){
+//        System.out.println(ns.getNum(a, b));
+//    }
+//    public static void getRandomNumFromArray(int[] nums, NumberSupplier ns){
+//        System.out.println(ns.getNum(nums));
+//    }
+
+//    public static void decToHex(int num, NumberToString nts){
+//        System.out.println(nts.convert(num));
+//    }
+
+//    public static void getProduct(int a, int b, IntCalc calc){
+//        System.out.println(calc.calc(a, b));
+//    }
+
+//    public static void showLongTime(CurrentTimePrinter ctp){
+//        ctp.printCurrentTime();
+//    }
+
+    //        p.playVolleyball();
+    //        p.playSoccer();
+    //        p.playBasketball();
 //    public static void join(IPlayer p){
-//        p.playBasketball();
-//        p.playSoccer();
-//        p.playVolleyball();
+
 //    }
 
 }
