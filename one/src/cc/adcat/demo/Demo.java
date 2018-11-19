@@ -21,6 +21,16 @@ public class Demo {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+        byte i = 127;
+        System.out.println(++i);
+
+//        int[][] a = new int[3][];
+//        System.out.println(a);
+//        System.out.println(a[0]);
+//        System.out.println(a[1]);
+//        System.out.println(a[2]);
+//        System.out.println(a[0][0]);
+
 //        ArrayList<String> list = new ArrayList<>();
 //        list.add("aaa");
 //        list.add("bbb");
