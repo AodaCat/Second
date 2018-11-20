@@ -60,4 +60,7 @@ public class PoolsUtil {
         }
     }
 
+    public static DataSource getDataSource() {
+        return dataSource;
+    }
 }
